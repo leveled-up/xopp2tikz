@@ -20,6 +20,7 @@ A quick and dirty Xournal++ file (xopp) to LaTeX Tikz Picture converter.
 - Images
 - Text marker
 - Audios
+- Multi-page xopp files
 
 ## License
 
