@@ -47,12 +47,12 @@ def color_cmd(attrib: dict[str, str]) -> tuple[str, str]:
 
 
 def font_size_cmd(size: str) -> str:
-    s = float(size) * 2
+    s = float(size)
     return "\\fontsize{" + str(s) + "}{" + str(1.2 * s) + "}\\selectfont{}"
 
 
 def position(x: str, y: str) -> str:
-    return f"({float(x) / 10}, -{float(y) / 10})"
+    return f"({float(x) / 30}, -{float(y) / 30})"
 
 
 def pairs_iter(items):
