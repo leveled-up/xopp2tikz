@@ -111,7 +111,8 @@ for layer in page:
                 print(color_)
                 print(
                     "\\node[" + color_name + ",anchor = west] at ", pos)
-                print(" {" + size + "$" + attrib["text"] + "$};")
+                print(" {" + size + "$\\displaystyle " +
+                      attrib["text"] + "$};")
             case "text":
                 if attrib["font"] != "Sans":
                     warn("Warning: text font changing unsupported")
