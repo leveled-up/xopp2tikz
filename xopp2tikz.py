@@ -73,14 +73,16 @@ for layer in page:
         warn(item.tag, item.attrib)
         match item.tag:
             case "stroke":
-                if attrib["tool"] != "pen":
-                    warn("Warning: Only pen tool supported for strokes")
+                if attrib["tool"] not in ("pen", "highlighter"):
+                    warn("Warning: Only pen + highlighter tool supported")
                 if item.text is None:
                     warn("Warning: skipping empty stroke")
                     continue
 
                 color_name, color_ = color_cmd(attrib)
                 print(color_)
+                if attrib["tool"] == "highlighter":
+                    color_name += ", draw opacity=0.5 "
                 width = str(float(attrib["width"]) / 10) + "mm"
                 style = ""
                 if "style" in attrib:
@@ -95,7 +97,7 @@ for layer in page:
                             warn("Unsupported line style ", attrib["style"])
                 fill = ""
                 if "fill" in attrib:
-                    fill = ", fill=" + color_name + "!50"
+                    fill = ", fill=" + color_name + ", fill opacity=0.5"
                 coord = " -- ".join(
                     position(x, y) for x, y in pairs_iter(item.text.split())
                 )

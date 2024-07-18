@@ -8,17 +8,16 @@ A quick and dirty Xournal++ file (xopp) to LaTeX Tikz Picture converter.
 
 ## Supported
 
-- All shapes drawn with pen
+- All shapes drawn with pen and text marker
 - Pen styles: normal, dashed, dotted, dashed-dotted
 - Colors
-- Filled Shapes
+- Filled shapes and overlapping with opacity
 - Text
 - TeX formulas
 
 ## Currently unsupported
 
 - Images
-- Text marker
 - Audios
 - Multi-page xopp files
 
