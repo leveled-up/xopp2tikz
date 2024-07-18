@@ -108,7 +108,7 @@ for layer in page:
                 color_name, color_ = color_cmd(attrib)
                 print(color_)
                 print(
-                    "\\node[" + color_name + ",anchor = east] at ", pos)
+                    "\\node[" + color_name + ",anchor = west] at ", pos)
                 print(" {" + size + "$" + attrib["text"] + "$};")
             case "text":
                 if attrib["font"] != "Sans":
@@ -122,7 +122,7 @@ for layer in page:
                 color_name, color_ = color_cmd(attrib)
                 print(color_)
                 print(
-                    "\\node[" + color_name + ",anchor = east] at ", pos)
+                    "\\node[" + color_name + ",anchor = west] at ", pos)
                 print(" {" + size + item.text + "};")
             case "image":
                 warn("Image not implemented")
